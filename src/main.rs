@@ -1,10 +1,5 @@
-use rust_gpiozero::*;
-use std::thread;
-use std::time::Duration;
+mod led_blink;
 
 fn main() {
-    // Create a new LED attached to Pin 17
-    let mut led = LED::new(17);
-    led.blink(0.01,1.0);
-    led.wait();
+    led_blink::led_blink(0.01)
 }
